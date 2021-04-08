@@ -10,6 +10,7 @@
 [![Made By](https://img.shields.io/badge/Made%20By-Uduak%20John-brightgreen)](https://github.com/udberg)
 [![Made By](https://img.shields.io/badge/Made%20By-Kenechukwu%20Oguagbaka-brightgreen)](https://github.com/keneogu)
 [![Twitter Follow](https://img.shields.io/twitter/follow/juduak_?label=Follow%20Uduak%20on%20Twitter&style=social)](https://twitter.com/juduak_)
+[![Twitter Follow](https://img.shields.io/twitter/follow/Kenechukwu?label=Follow%20Oguagbaka%20on%20Twitter&style=social)](https://twitter.com/keneogu)
 
 </div>
 
@@ -28,7 +29,7 @@
 
 ## 🧐 About <a name = "about"></a>
 <h3 align="center"> 
-
+This project is a library application where a user can add and remove books, mark as read or unread as well as get the title, author, and number of pages in the book. Built to display the use of Objects in JavaScript.
 </h3>
 
 
