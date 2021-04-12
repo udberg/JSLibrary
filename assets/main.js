@@ -1,8 +1,11 @@
 let library = [];
-let list = document.getElementById('library-list');
+let list = document.querySelector('.library-list');
 let libForm = document.querySelector('.lib-form');
 let addBtn = document.querySelector('.add-btn');
 let subBtn = document.querySelector('.subBtn')
+let clicker = document.querySelector('.submit-btn');
+
+
 
 function Book(author,title,pages,read){
   this.author = author;
@@ -26,13 +29,24 @@ function addBookToLibrary(book) {
   list.appendChild(row);
 }
 
-list.addEventListener('submit', function(e){
+clicker.addEventListener('submit', function(){
+
   // Get form values
   const title = document.getElementById('title').value,
         author = document.getElementById('author').value,
         pages = document.getElementById('pages').value,
         read = document.getElementById('read').value
 
+        
+        
   // Instantiate book
   const book = new Book(title, author, pages, read);
+
+  return alert('hello world');
+
+  
+
 });
+
+
+console.log(library);
