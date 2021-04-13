@@ -15,7 +15,7 @@ function Book(author,title,pages,read){
 }
 
 function addBookToLibrary(book) {
-  // Create tr element
+  // Create tr element 
   const row = document.createElement('tr');
   // Insert cols
   row.innerHTML = `
