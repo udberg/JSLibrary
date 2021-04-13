@@ -20,7 +20,8 @@ button.addEventListener('click', function(){
 
 });
 
-form.addEventListener('submit', function(){
+form.addEventListener('submit', function(e){
+  e.preventDefault();
   
   // Get form values
   const author= document.querySelector('.author').value,
