@@ -4,18 +4,18 @@ const form = document.querySelector('.form');
 const button = document.querySelector('.button');
 const container = document.querySelector('.form-container');
 
-function Book(author, title, pages, read){
+function Book(author, title, pages, read) {
   this.author = author;
   this.title = title;
   this.pages = pages;
-  this.read = read; 
+  this.read = read;
+
 }
 
 button.addEventListener('click', function() {
-  container.classList.contains('invisible') ? container.classList.remove('invisible'): 
-  container.classList.add('invisible');
-
-});
+   container.classList.contains('invisible') ? container.classList.remove('invisible') : 
+   container.classList.add('invisible');
+  });
 
 form.addEventListener('submit', function() {
 
