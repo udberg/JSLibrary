@@ -57,10 +57,6 @@ Object.values(input).forEach((book) => {
   
   list.appendChild(row);
 
-
-
-
-
 })
 
 }
