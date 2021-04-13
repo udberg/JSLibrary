@@ -1,8 +1,8 @@
-let library = [];
-let list = document.querySelector('.library-list');
-let form = document.querySelector('.form');
-let button = document.querySelector('.button');
-let container = document.querySelector('.form-container');
+const library = [];
+const list = document.querySelector('.library-list');
+const form = document.querySelector('.form');
+const button = document.querySelector('.button');
+const container = document.querySelector('.form-container');
 
 
 
