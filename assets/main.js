@@ -31,14 +31,13 @@ form.addEventListener('submit', function() {
   read.checked ? data = read.value = 'YES' : data = read.value = "NO";
   
   //Object Instantiation
-  const book = new Book(author,title,pages,data);
+  const book = new Book(author, title, pages, data);
   
-  library.push(book); 
+  library.push(book);
   
   addBookToLibrary(library);
   
 });
-
 
 
 function addBookToLibrary(input) {
@@ -55,8 +54,7 @@ Object.values(input).forEach((book) => {
     <td> ${book.read} </td>
     <td><a href="#" class="delete">X<a></td>'`;
   
-  list.appendChild(row);
+    list.appendChild(row);
 
-})
-
+  });
 }
