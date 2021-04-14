@@ -9,45 +9,23 @@ function Book(author, title, pages, read) {
   this.title = title;
   this.pages = pages;
   this.read = read;
-
 }
 
-button.addEventListener('click', function() {
-    container.classList.contains('invisible') ? container.classList.remove('invisible') 
-    : container.classList.add('invisible');
-    });
-
-form.addEventListener('submit', function() {
-
-
-  // Get form values
-  const author = document.querySelector('.author').value,
-    title = document.querySelector('.title').value,
-    pages = document.querySelector('.pages').value,
-    read = document.querySelector('#read');
-  let data;
-
-  //Checkbox validation
-  read.checked ? data = read.value = 'YES' : data = read.value = 'NO';
-
-  //Object Instantiation
-  const book = new Book(author, title, pages, data);
-
-  library.push(book);
- 
-  addBookToLibrary(library);
-
+button.addEventListener('click', () => {
+  if (container.classList.contains('invisible')) {
+    container.classList.remove('invisible');
+  } else {
+    container.classList.add('invisible');
+  }
 });
 
-
-  function addBookToLibrary(input) {
+function addBookToLibrary(input) {
   // Create tr element
-    const row = document.createElement('tr');
- 
-  
-Object.values(input).forEach((book) => {
+  const row = document.createElement('tr');
 
-  row.innerHTML= `
+
+  Object.values(input).forEach((book) => {
+    row.innerHTML = `
     <td> ${book.author} </td>
     <td> ${book.title} </td>
     <td> ${book.pages} </td>
@@ -56,5 +34,34 @@ Object.values(input).forEach((book) => {
 
     list.appendChild(row);
 
+    document.querySelector('.delete').addEventListener('click', (e) => {
+      if (e.target.className === 'delete') {
+        e.target.parentElement.parentElement.remove();
+      }
+    });
   });
 }
+
+
+form.addEventListener('submit', () => {
+  // Get form values
+  const author = document.querySelector('.author').value;
+  const title = document.querySelector('.title').value;
+  const pages = document.querySelector('.pages').value;
+  const read = document.querySelector('#read');
+  let data;
+
+  // Checkbox validation
+  if (read.checked) {
+    data = 'YES';
+  } else {
+    data = 'NO';
+  }
+
+  // Object Instantiation
+  const book = new Book(author, title, pages, data);
+
+  library.push(book);
+
+  addBookToLibrary(library);
+});
