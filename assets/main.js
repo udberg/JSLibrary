@@ -30,11 +30,18 @@ function addBookToLibrary(input) {
     <td> ${book.title} </td>
     <td> ${book.pages} </td>
     <td> ${book.read} </td>
-    <td><a href="#" class="delete">X<a></td>'`;
+    <td><a href="#" class="delete">X<a></td>'`
 
     list.appendChild(row);
+    
+    document.querySelector('.delete').addEventListener('click', (e) => {
+      if(e.target.className === 'delete') {
+        e.target.parentElement.parentElement.remove();
+      }
+    })
   });
 }
+
 
 form.addEventListener('submit', () => {
   // Get form values
